@@ -68,11 +68,11 @@ fn validate_simulation() {
 /// Simulate the rabbit population
 fn simulate(starting_rabbits: i128) -> i32 {
     if starting_rabbits == 1 {
-        return 0;
+        0
     } else if starting_rabbits % 2 != 0 {
-        return 1 + simulate(starting_rabbits * 3 + 1);
+        1 + simulate(starting_rabbits * 3 + 1)
     } else {
-        return 1 + simulate(starting_rabbits / 2);
+        1 + simulate(starting_rabbits / 2)
     }
 }
 
